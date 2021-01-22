@@ -26,7 +26,7 @@ int max_len_of_equal(std::vector<float>& a, std::vector<float>& b) {
                 while (a[i + t] == b[j + t]) {
                     t++;
                 }
-                tmp = t + 1;
+                tmp = std::max(t + 1, tmp);
             }
         }
     }
@@ -35,7 +35,7 @@ int max_len_of_equal(std::vector<float>& a, std::vector<float>& b) {
 }
 
 int main() {
-    std::vector<std::vector<float>> a;
+    std::vector<std::vector<float>> a(10);
     std::thread th[10];
     float resE[10];
     float resD[10];
