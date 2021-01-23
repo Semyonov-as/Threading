@@ -8,8 +8,9 @@ script:
   - cd build
   - cmake ..
   - cmake --build .
+  - cd bin
   - ls
-  - ./bin/main.out
+  - ./main
   
 notifications:
   email: false
