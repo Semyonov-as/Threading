@@ -8,6 +8,7 @@ script:
   - cd build
   - cmake ..
   - cmake --build .
+  - ./main
   
 notifications:
   email: false
